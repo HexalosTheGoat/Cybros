@@ -1,0 +1,308 @@
+/* =========================================
+   1. VARIABLES & CONFIGURATION (LE NOYAU)
+   ========================================= */
+:root {
+    --core-white: #f0f0f0;
+    --purifier-orange: #ff9d00;
+    --purifier-glow: #ffcc00;
+    --void-black: #0b0b0b;
+    --armor-grey: #151515;
+    --interface-grey: #1a1a1a;
+}
+
+/* Importation des Polices */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--void-black);
+    color: var(--core-white);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+
+    /* IMAGE DE FOND AVEC FILTRE SOMBRE */
+    /* Remplace 'background.jpg' par ton image */
+    background-image:
+            linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+            url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Typographie futuriste */
+h1, h2, h3, .btn, .nav-link, .big-score, .social-btn {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   2. NAVIGATION (BARRE DU HAUT)
+   ========================================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(15, 15, 15, 0.95);
+    border-bottom: 2px solid var(--purifier-orange);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--purifier-orange);
+    text-shadow: 0 0 10px rgba(255, 157, 0, 0.4);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--core-white);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--purifier-orange);
+    text-shadow: 0 0 8px var(--purifier-glow);
+}
+
+/* =========================================
+   3. ÉLÉMENTS GLOBAUX (TITRES, BOUTONS)
+   ========================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 60px 0 40px;
+    font-size: 2.5rem;
+    color: var(--purifier-orange);
+    border-bottom: 2px solid var(--purifier-orange);
+    display: inline-block;
+    padding-bottom: 10px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: transparent;
+    border: 2px solid var(--purifier-orange);
+    color: var(--purifier-orange);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    /* Forme géométrique Protoss */
+    clip-path: polygon(15% 0, 100% 0, 100% 70%, 85% 100%, 0 100%, 0 30%);
+}
+
+.btn:hover {
+    background: var(--purifier-orange);
+    color: var(--void-black);
+    box-shadow: 0 0 20px rgba(255, 157, 0, 0.6);
+}
+
+/* =========================================
+   4. CARTES (GÉNÉRAL & MEMBRES)
+   ========================================= */
+.card {
+    background: rgba(21, 21, 21, 0.9);
+    border: 1px solid #333;
+    transition: 0.3s;
+    overflow: hidden; /* Important pour que l'image ne dépasse pas */
+}
+
+.card:hover {
+    border-color: var(--purifier-orange);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-content {
+    padding: 30px;
+}
+
+/* =========================================
+   5. PROFIL HEXALOS & RÉSEAUX SOCIAUX
+   ========================================= */
+.profile-section {
+    position: relative;
+    z-index: 10;
+    margin-top: -80px; /* Remonte sur le header */
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: rgba(255, 157, 0, 0.05);
+    border: 1px solid var(--purifier-orange);
+    color: var(--core-white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: var(--purifier-orange);
+    color: #000;
+    box-shadow: 0 0 15px var(--purifier-orange);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   6. EMPLACEMENTS VIDES (ROSTER)
+   ========================================= */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card-offline {
+    background: rgba(10, 10, 10, 0.5);
+    border: 2px dashed #444;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    transition: 0.3s;
+    min-height: 250px;
+    text-align: center;
+}
+
+.card-offline:hover {
+    border-color: var(--purifier-orange);
+    color: var(--purifier-orange);
+    background: rgba(20, 20, 20, 0.8);
+    cursor: help;
+}
+
+.offline-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.blink-text {
+    animation: blinker 2s linear infinite;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: var(--purifier-orange);
+    font-family: 'Orbitron';
+}
+
+@keyframes blinker {
+    50% { opacity: 0.3; }
+}
+
+/* =========================================
+   7. PAGES REVIEWS (DÉTAILS)
+   ========================================= */
+.review-hero {
+    background: rgba(0,0,0,0.6);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.review-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Gestion Mobile pour Reviews */
+@media (max-width: 768px) {
+    .review-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Barres de statistiques */
+.stat-bar-container {
+    background: #222;
+    height: 10px;
+    width: 100%;
+    margin: 5px 0 20px 0;
+    border: 1px solid #444;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    background: var(--purifier-orange);
+    box-shadow: 0 0 10px var(--purifier-orange);
+}
+
+/* Boites de verdict (Pros / Cons) */
+.verdict-box {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.verdict-box ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.pros { border-left: 3px solid #00ff00; }
+.cons { border-left: 3px solid #ff0000; }
+
+.big-score {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--purifier-orange);
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* =========================================
+   8. FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 80px;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.8rem;
+    background: rgba(10, 10, 10, 0.95);
+}
