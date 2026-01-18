@@ -3,101 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBROS | Hexalos</title>
+    <title>CYBROS | Profil</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<nav>
-    <div class="logo">CYBROS :: SYSTEM</div>
-    <div class="nav-links">
-        <a href="index.html" class="nav-link active">PROFIL</a>
-        <a href="reviews.html" class="nav-link">ARSENAL</a>
-    </div>
-</nav>
+    <nav>
+        <div class="logo">CYBROS :: SYSTEM</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active">PROFIL</a>
+            <a href="setup.html" class="nav-link">ARSENAL</a>
+        </div>
+    </nav>
 
-<header style="height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 2px solid var(--purifier-orange);">
-    <h1 style="font-size: 5rem; text-shadow: 0 0 25px rgba(255, 157, 0, 0.6); margin: 0;">CYBROS</h1>
-    <h3 style="color: var(--purifier-orange); letter-spacing: 8px; font-size: 1.2rem;">HEXALOS ONLINE</h3>
-</header>
+    <header style="height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(0,0,0,0) 100%);">
+        <h1 style="font-size: 4rem; text-shadow: 0 0 20px rgba(255, 157, 0, 0.6);">CYBROS</h1>
+        <h3 style="color: var(--purifier-orange); letter-spacing: 8px;">HEXALOS ONLINE</h3>
+    </header>
 
-<div class="container profile-section">
+    <div class="container profile-section">
 
-    <div class="card" style="padding: 40px; margin-bottom: 60px; text-align: center;">
+        <div class="card">
+            <div class="card-content" style="text-align: center;">
+                
+                <div style="margin-top: -80px; margin-bottom: 20px;">
+                    <img src="assets/hexapfp.png" alt="Hexalos" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--purifier-orange); object-fit: cover; box-shadow: 0 0 20px rgba(255, 157, 0, 0.3); background: #000;">
+                </div>
 
-        <div class="avatar-container">
-            <img src="assets/hexapfp.png" alt="Hexalos" class="profile-avatar">
+                <h2>HEXALOS</h2>
+                <span style="color: var(--purifier-orange); font-family: 'Orbitron'; font-size: 1.1rem;">LEADER / FONDATEUR</span>
+                
+                <div style="margin: 20px 0;">
+                    <span style="padding: 5px 15px; background: rgba(0, 255, 0, 0.1); border: 1px solid #0f0; color: #0f0; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">
+                        ● EN LIGNE
+                    </span>
+                </div>
+
+                <p style="color: #ccc; max-width: 600px; margin: 0 auto; margin-bottom: 30px;">
+                    Joueur principal et fondateur du protocole Cybros. <br>
+                    En quête permanente d'optimisation et de pureté de gameplay.
+                </p>
+
+                <div class="social-grid">
+                    <a href="https://www.twitch.tv/cybros_esport" target="_blank" class="social-btn"><i class="fa-brands fa-twitch"></i> &nbsp; TWITCH</a>
+                    <a href="https://www.tiktok.com/@hexalos_iso" target="_blank" class="social-btn"><i class="fa-brands fa-tiktok"></i> &nbsp; TIKTOK</a>
+                    <a href="https://discord.gg/gAUCAaCKY7" target="_blank" class="social-btn"><i class="fa-brands fa-discord"></i> &nbsp; DISCORD</a>
+                    <a href="https://www.youtube.com/@Phoenix_forces" target="_blank" class="social-btn"><i class="fa-brands fa-youtube"></i> &nbsp; YOUTUBE</a>
+                    <a href="https://www.instagram.com/hexalos_the_goat/" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i> &nbsp; INSTAGRAM</a>
+                </div>
+            </div>
         </div>
 
-        <div style="margin-bottom: 30px;">
-            <h2 style="font-size: 3.5rem; color: #fff; line-height: 1; margin-bottom: 10px;">HEXALOS</h2>
-            <span style="color: var(--purifier-orange); font-family: 'Orbitron'; font-size: 1.2rem;">LEADER / FONDATEUR</span>
-            <br>
-            <span style="display: inline-block; margin-top: 15px; padding: 5px 15px; background: rgba(0, 255, 0, 0.1); border: 1px solid #0f0; color: #0f0; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">
-                    ● EN LIGNE
-                </span>
+        <h3 class="section-title">UNITÉS</h3>
+
+        <div class="roster-grid">
+            <div class="card card-offline">
+                <div class="offline-icon"><i class="fa-solid fa-plug"></i></div>
+                <h3>UNITÉ 02</h3>
+                <p>SIGNAL PERDU</p>
+                <span class="blink-text">[ EN ATTENTE ]</span>
+            </div>
+            <div class="card card-offline">
+                <div class="offline-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                <h3>UNITÉ 03</h3>
+                <p>NON ASSIGNÉ</p>
+                <span class="blink-text">[ RECHERCHE... ]</span>
+            </div>
+            <div class="card card-offline">
+                <div class="offline-icon"><i class="fa-solid fa-lock"></i></div>
+                <h3>UNITÉ 04</h3>
+                <p>VERROUILLÉ</p>
+                <span class="blink-text">[ MANQUE DE MINERAIS ]</span>
+            </div>
         </div>
 
-        <p style="font-size: 1.1rem; color: #ccc; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-            Joueur principal et fondateur du protocole Cybros. <br>
-            En quête permanente d'optimisation et de pureté de gameplay.
-        </p>
-
-        <div class="social-grid">
-
-            <a href="https://www.twitch.tv/cybros_esport" target="_blank" class="social-btn twitch-btn">
-                <i class="fa-brands fa-twitch"></i> &nbsp; TWITCH
-            </a>
-
-            <a href="https://www.tiktok.com/@hexalos_iso" target="_blank" class="social-btn tiktok-btn">
-                <i class="fa-brands fa-tiktok"></i> &nbsp; TIKTOK
-            </a>
-
-            <a href="https://discord.gg/gAUCAaCKY7" target="_blank" class="social-btn discord-btn">
-                <i class="fa-brands fa-discord"></i> &nbsp; DISCORD
-            </a>
-
-            <a href="https://www.youtube.com/@Phoenix_forces" target="_blank" class="social-btn youtube-btn">
-                <i class="fa-brands fa-youtube"></i> &nbsp; YOUTUBE
-            </a>
-
-            <a href="https://www.instagram.com/hexalos_the_goat/" target="_blank" class="social-btn instagram-btn">
-                <i class="fa-brands fa-instagram"></i> &nbsp; INSTAGRAM
-            </a>
-
-        </div>
-    </div>
-
-
-    <h3 class="section-title" style="font-size: 1.5rem; margin-top: 0;">EMPLACEMENTS DISPONIBLES</h3>
-
-    <div class="roster-grid">
-        <div class="card card-offline">
-            <div class="offline-icon">🔌</div>
-            <h3>UNITÉ 02</h3>
-            <p>SIGNAL PERDU</p>
-            <span class="blink-text">[ EN ATTENTE ]</span>
-        </div>
-        <div class="card card-offline">
-            <div class="offline-icon">📡</div>
-            <h3>UNITÉ 03</h3>
-            <p>NON ASSIGNÉ</p>
-            <span class="blink-text">[ RECHERCHE... ]</span>
-        </div>
-        <div class="card card-offline">
-            <div class="offline-icon">🔒</div>
-            <h3>UNITÉ 04</h3>
-            <p>VERROUILLÉ</p>
-            <span class="blink-text">[ MANQUE DE VESPENE ]</span>
-        </div>
     </div>
 
-</div>
-
-<footer style="margin-top: 50px;">
-    &copy; 2024 CYBROS SYSTEM.
-</footer>
+    <footer>
+        &copy; 2024 CYBROS SYSTEM.
+    </footer>
 
 </body>
 </html>
