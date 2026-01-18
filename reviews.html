@@ -1,70 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CYBROS | Arsenal</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBROS | Matériel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
 <nav>
-  <div class="logo">CYBROS :: DATA</div>
-  <div class="nav-links">
-    <a href="index.html" class="nav-link">MATRICE</a>
-    <a href="reviews.html" class="nav-link active">ARSENAL</a>
-  </div>
-</nav>
-
-<div class="container">
-
-  <div style="text-align: center;">
-    <h2 class="section-title">LOGS D'ÉQUIPEMENT</h2>
-    <p style="color: #888; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">
-      Accès à la base de données matérielle. Analyse des périphériques utilisés pour maintenir la supériorité tactique sur le ladder.
-    </p>
-  </div>
-
-  <div class="card" style="display: flex; flex-direction: column; margin-bottom: 30px; padding: 30px; border-left: 4px solid var(--purifier-orange);">
-    <h3 style="margin-bottom: 10px;">SOURIS : RAZER VIPER V3 PRO</h3>
-    <p style="margin-bottom: 20px; color: #ccc;">
-      Le summum de la légèreté (54g). Capteur Focus Pro 35K et polling rate de 8000Hz. Une arme de précision pure.
-    </p>
-    <a href="review-souris.html" class="btn" style="width: fit-content;">LIRE LE RAPPORT</a>
-  </div>
-
-  <div class="card" style="display: flex; flex-direction: column; margin-bottom: 30px; padding: 30px; border-left: 4px solid var(--purifier-orange);">
-    <h3 style="margin-bottom: 10px;">CLAVIER : KEYCHRON Q6 MAX</h3>
-    <p style="margin-bottom: 20px; color: #ccc;">
-      Châssis lourd en aluminium CNC. Isolation acoustique et switches lubrifiés pour une frappe lourde et satisfaisante.
-    </p>
-    <a href="review-clavier.html" class="btn" style="width: fit-content;">LIRE LE RAPPORT</a>
-  </div>
-
-  <div class="card" style="display: flex; flex-direction: column; margin-bottom: 30px; padding: 30px; border-left: 4px solid var(--purifier-orange);">
-    <h3 style="margin-bottom: 10px;">CASQUE : ATH-R70x</h3>
-    <p style="margin-bottom: 20px; color: #ccc;">
-      Architecture ouverte et système "3D Wing". Une spatialisation sonore de niveau studio pour une conscience situationnelle totale.
-    </p>
-    <a href="review-casque.html" class="btn" style="width: fit-content;">LIRE LE RAPPORT</a>
-  </div>
-
-  <div class="card" style="display: flex; flex-direction: column; margin-bottom: 30px; padding: 30px; border-left: 4px solid var(--purifier-orange); background: linear-gradient(90deg, rgba(255, 157, 0, 0.05), transparent);">
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-      <h3 style="margin-bottom: 10px;">SURFACE : PHANTUM ZSO-001</h3>
-      <span style="background: var(--purifier-orange); color: black; padding: 4px 10px; font-weight: bold; font-size: 0.8rem; clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);">LIMITED EDITION</span>
+    <div class="logo">CYBROS :: DATA</div>
+    <div class="nav-links">
+        <a href="index.html" class="nav-link">PROFIL</a>
+        <a href="reviews.html" class="nav-link active">ARSENAL</a>
+        <a href="setup.html" class="nav-link">LOGICIELS</a>
     </div>
-    <p style="margin-bottom: 20px; color: #ccc;">
-      Artefact légendaire. Surface en verre trempé micro-gravée. Friction quasi-nulle (0.12µ) pour une vitesse divine.
-    </p>
-    <a href="review-tapis.html" class="btn" style="width: fit-content;">ACCÉDER AUX DONNÉES</a>
-  </div>
+</nav>
+<div class="container">
+    <div style="text-align: center;">
+        <h2 class="section-title">LOGS D'ÉQUIPEMENT</h2>
+        <p style="color: #888; margin-bottom: 40px; font-size: 0.9rem;">Accès à la base de données matérielle.</p>
+    </div>
 
+    <div class="gear-card">
+        <div class="gear-header"><h3><i class="fa-solid fa-computer-mouse" style="color:var(--purifier-orange);"></i> &nbsp; RAZER VIPER V3 PRO</h3></div>
+        <p style="color:#ccc; font-size:0.9rem; margin:10px 0 20px;">54g. Capteur Focus Pro 35K. 8000Hz.</p>
+        <a href="review-souris.html" class="btn" style="width: fit-content;">RAPPORT</a>
+    </div>
+
+    <div class="gear-card">
+        <div class="gear-header"><h3><i class="fa-solid fa-keyboard" style="color:var(--purifier-orange);"></i> &nbsp; KEYCHRON Q6 MAX</h3></div>
+        <p style="color:#ccc; font-size:0.9rem; margin:10px 0 20px;">Aluminium CNC. Isolation acoustique. Switches lubrifiés.</p>
+        <a href="review-clavier.html" class="btn" style="width: fit-content;">RAPPORT</a>
+    </div>
+
+    <div class="gear-card">
+        <div class="gear-header"><h3><i class="fa-solid fa-headphones-simple" style="color:var(--purifier-orange);"></i> &nbsp; ATH-R70x</h3></div>
+        <p style="color:#ccc; font-size:0.9rem; margin:10px 0 20px;">Ouvert. Spatialisation studio. Ultraléger.</p>
+        <a href="review-casque.html" class="btn" style="width: fit-content;">RAPPORT</a>
+    </div>
+
+    <div class="gear-card legendary">
+        <div class="gear-header">
+            <h3><i class="fa-solid fa-layer-group" style="color:var(--purifier-orange);"></i> &nbsp; PHANTUM ZSO-001</h3>
+            <span class="gear-tag">LIMITED</span>
+        </div>
+        <p style="color:#ccc; font-size:0.9rem; margin:10px 0 20px;">Verre trempé. Friction nulle (0.12µ).</p>
+        <a href="review-tapis.html" class="btn" style="width: fit-content;">DONNÉES</a>
+    </div>
 </div>
-
-<footer>
-  BASE DE DONNÉES TERMINÉE. <br> &copy; 2024 CYBROS SYSTEM.
-</footer>
-
+<footer>&copy; 2024 CYBROS SYSTEM.</footer>
 </body>
 </html>
