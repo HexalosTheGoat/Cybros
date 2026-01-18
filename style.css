@@ -1,39 +1,113 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thème Clair Robot</title>
-    </head>
-<body>
+/* Définition des variables de couleur basées sur l'image */
+:root {
+    /* COULEURS DE FOND */
+    --bg-primary: #FFFFFF;     /* Blanc pur (Armure principale, fond de page) */
+    --bg-secondary: #F5F5F5;   /* Gris très clair (Pour délimiter des sections) */
+    --bg-tertiary: #ECEFF1;    /* Gris bleuté léger (Pour des éléments de fond subtils) */
 
-    <main style="max-width: 800px; margin: 0 auto;">
-        <h1>Interface <span class="highlight">Veilleur</span> (Mode Clair)</h1>
-        <p>Ceci est un exemple de texte utilisant la palette de couleurs extraite de l'image du robot. Le fond est clair, le texte est foncé pour le contraste, et le jaune sert d'accentuation.</p>
+    /* COULEURS DE TEXTE */
+    --text-primary: #2C2C2C;   /* Gris anthracite foncé (Mécanique sombre -> Texte principal) */
+    --text-secondary: #546E7A; /* Gris moyen (Pour les sous-titres ou texte moins important) */
 
-        <div class="alert-box" style="margin: 20px 0;">
-            <span class="alert-icon">?</span>
-            <div>
-                <strong>Information système :</strong> Le scanner a détecté une nouvelle machine dans la zone.
-            </div>
-        </div>
+    /* COULEUR D'ACCENTUATION */
+    --accent-color: #FBC02D;   /* Jaune/Or (Rayures, œil, point d'interrogation) */
+    --accent-hover: #C49000;   /* Version plus sombre pour le survol */
 
-        <div class="card">
-            <div class="card-header">
-                <h2>Détails de l'unité</h2>
-            </div>
-            <p>L'armure blanche reflète la lumière. Les câbles et les capteurs jaunes sont très visibles. C'est un design parfait pour une interface utilisateur propre et lumineuse.</p>
-            <p>Voici un <a href="#">lien exemple</a> dans le texte.</p>
-            <br>
-            <button class="btn">Scanner la zone</button>
-        </div>
+    /* BORDURES ET OMBRES */
+    --border-color: #E0E0E0;   /* Gris subtil pour les délimitations */
+    --shadow-subtle: 0 2px 5px rgba(0,0,0,0.05); /* Ombre légère rappelant l'effet sticker */
+}
 
-        <div class="card">
-             <h3>Section Secondaire</h3>
-             <p style="color: var(--text-secondary);">Ce texte utilise la couleur secondaire pour moins d'emphase.</p>
-        </div>
+/* Reset basique */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    </main>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-secondary); /* Fond légèrement grisé pour faire ressortir les cartes blanches */
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 20px;
+}
 
-</body>
-</html>
+/* Typographie */
+h1, h2, h3 {
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 span.highlight {
+    color: var(--accent-color); /* Utilisation du jaune pour surligner */
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Composants de type "Carte" (Rappel des plaques d'armure blanches) */
+.card {
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid var(--border-color);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    /* Petite ligne d'accentuation jaune sous le titre */
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+/* Boutons (Utilisant la couleur d'accent jaune) */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    /* Texte foncé sur fond jaune pour la lisibilité, comme les rayures */
+    color: var(--text-primary);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Élément spécial "Point d'interrogation" (Zone d'info) */
+.alert-box {
+    background-color: #FFFDE7; /* Fond jaune très pâle */
+    border-left: 6px solid var(--accent-color);
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-right: 15px;
+    font-weight: bold;
+}
